@@ -1,0 +1,19 @@
+{
+  "apps": [
+    {
+      "name": "rest",
+      "script": "main.js",
+      "watch": true,
+      "instances": 2,
+      "exec_mode": "cluster",
+      "node_args": ["--max-old-space-size=2048"],
+      "ignore_watch": ["node_modules", "logs", ".env"],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
